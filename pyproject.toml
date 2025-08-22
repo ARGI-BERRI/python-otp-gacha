@@ -8,10 +8,12 @@ dependencies = []
 
 [dependency-groups]
 dev = [
- "loguru>=0.7.3",
- "pytest>=8.4.1",
- "pytest-cov>=6.2.1",
- "tqdm>=4.67.1",
+    "loguru>=0.7.3",
+    "pyright>=1.1.404",
+    "pytest>=8.4.1",
+    "pytest-cov>=6.2.1",
+    "ruff>=0.12.10",
+    "tqdm>=4.67.1",
 ]
 
 [build-system]
@@ -37,11 +39,7 @@ ignore = ["COM812"]
     "PLR2004", # magic number is used
 ]
 
-"scripts/**" = [
-    "INP001",
-    "D",
-    "G"
-]
+"scripts/**" = ["INP001", "D", "G"]
 
 [tool.ruff.lint.pydocstyle]
 convention = "google"
